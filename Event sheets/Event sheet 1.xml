@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Score" sid="193721005417206" static="0" type="number">100</variable>
+        <event-group description="" sid="956758274064227" title="Funcionamiento del sistema" />
+        <event-block sid="764494184275238">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="493333298151727" type="Jugador1">
+                    <param id="0" name="Object">Monedas</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="286109850872193" type="Monedas" />
+                <action id="-10" name="Add to" sid="542797003934448" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="774173912156647">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="587458865123834" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="677998485938151" type="Text">
+                    <param id="0" name="Text">zeropad(Score,8)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="431633110620185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="538246854393831" type="Jugador2">
+                    <param id="0" name="Object">Monedas</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="293062076263767" type="Monedas" />
+                <action id="-10" name="Add to" sid="331068689650324" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327060974632231">
+            <conditions>
+                <condition id="0" name="On click" sid="377080490548228" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="437506364724728" type="Jugador1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="804335420852718" type="Jugador2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="408370188644142" type="Jugador1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="314860929006962" type="Jugador2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723273141206403">
+            <conditions>
+                <condition id="0" name="On click" sid="270086132100806" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="743740177168259" type="Jugador1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="486134258556417" type="Jugador2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="696956651051396" type="Jugador1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="800411786551959" type="Jugador2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Hola</comment>
+    </events>
+</c2eventsheet>
